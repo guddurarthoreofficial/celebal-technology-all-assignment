@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ToDoApp from "./components/ToDoApp";
 
 function App() {
+  const studentTasks = [
+    {
+      subject: "Math",
+      description: "Solve Exercise 3.2",
+      dueDate: "2025-05-28",
+      status: "pending",
+    },
+    {
+      subject: "English",
+      description: "Essay on Climate Change",
+      dueDate: "2025-05-29",
+      status: "pendnig",
+    },
+    {
+      subject: "Science",
+      description: "Revise Physics Chapter 4",
+      dueDate: "2025-05-30",
+      status: "completed",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ToDoApp studentTasks={studentTasks} />
+    </>
   );
 }
 
