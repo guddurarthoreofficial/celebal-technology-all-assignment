@@ -1,0 +1,67 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial;
+}
+
+h1 {
+  text-align: center;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 8px;
+}
+
+.task-form button {
+  padding: 8px 12px;
+  background: #0a74da;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.task-card {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.task-card.completed {
+  background-color: #e2f7e2;
+}
+
+.task-card.pending {
+  background-color: #fff6cc;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button.delete {
+  background-color: #e74c3c;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.controls label {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}

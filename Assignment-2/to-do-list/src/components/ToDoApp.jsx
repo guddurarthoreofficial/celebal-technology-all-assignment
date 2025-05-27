@@ -1,34 +1,29 @@
-import React from 'react';
-import './ToDoApp.css';
+import React from "react";
 
-const ToDoApp = ({ studentTasks }) => {
-    const onStatusClickHandler = () => {
-        alert("clicked");
-    };
-
-    return (
-        <div className="todo-container">
-            <h2>Student Task </h2>
-            <ul className="todo-list">
-                {studentTasks.map((data, index) => (
-                    <li key={index} className={`todo-item ${data.status}`}>
-
-                        <div className="info">
-                            <span><strong>subject:</strong> {data.subject}</span>
-                            <span><strong>description:</strong> {data.description}</span>
-                            <span><strong>dueDate:</strong> {data.dueDate}</span>
-                            <span className="status-tag">{data.status}</span>
-                        </div>
-
-                        <button onClick={onStatusClickHandler}>
-                            {data.status === "pending" ? "Mark as Completed" : "Mark as Pending"}
-                        </button>
-
-                    </li>
-                ))}
-            </ul>
+const ToDoApp = ({ tasks, toggleStatus, removeTask }) => {
+  return (
+    <>
+      {tasks.map((task, index) => (
+        <div
+          key={index}
+          className={`task-card ${task.status === "completed" ? "completed" : "pending"}`}
+        >
+          <p><strong>Subject:</strong> {task.subject}</p>
+          <p><strong>Description:</strong> {task.description}</p>
+          <p><strong>DueDate:</strong> {task.dueDate}</p>
+          <p className="status">{task.status}</p>
+          <div className="buttons">
+            <button onClick={() => toggleStatus(index)}>
+              Mark as {task.status === "pending" ? "Completed" : "Pending"}
+            </button>
+            <button onClick={() => removeTask(index)} className="delete">
+              Delete
+            </button>
+          </div>
         </div>
-    );
+      ))}
+    </>
+  );
 };
 
 export default ToDoApp;
