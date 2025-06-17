@@ -49,28 +49,37 @@ const Player = ({ track }) => {
   }, [track]);
 
   return (
-    <div className="bg-gray-800 text-white p-4 flex flex-col gap-2">
-      <div className="flex justify-between items-center">
+    <div className="w-full bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white p-4 shadow-lg rounded-t-xl">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        {/* Song Info */}
         <div>
-          <h2 className="font-bold">{track.title}</h2>
-          <p className="text-sm">{track.artist}</p>
+          <h2 className="text-lg font-semibold">{track.title}</h2>
+          <p className="text-sm text-gray-400">{track.artist}</p>
         </div>
-        <button onClick={togglePlay} className="px-4 py-2 bg-green-500 rounded">
-          {playing ? 'Pause' : 'Play'}
-        </button>
+
+        {/* Play Button */}
+        <div className="flex items-center gap-4">
+          <button
+            onClick={togglePlay}
+            className="px-4 py-2 bg-green-500 hover:bg-green-400 transition rounded-full text-sm font-medium shadow"
+          >
+            {playing ? 'Pause' : 'Play'}
+          </button>
+        </div>
       </div>
 
-      <div className="flex items-center gap-2">
-        <span className="text-sm w-10">{formatTime(currentTime)}</span>
+      {/* Progress Bar */}
+      <div className="flex items-center gap-3 mt-4">
+        <span className="text-xs w-12 text-right">{formatTime(currentTime)}</span>
         <input
           type="range"
           min="0"
           max={duration || 0}
           value={currentTime}
           onChange={handleProgressChange}
-          className="w-full h-1 rounded-lg overflow-hidden appearance-none bg-green-500"
+          className="w-full accent-green-500 cursor-pointer"
         />
-        <span className="text-sm w-10 text-right">{formatTime(duration)}</span>
+        <span className="text-xs w-12">{formatTime(duration)}</span>
       </div>
 
       <audio
