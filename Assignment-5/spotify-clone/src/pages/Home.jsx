@@ -30,7 +30,7 @@ const Home = () => {
                 ))}
             </main>
 
-            <div className="fixed bottom-0 left-64 w-[calc(100%-16rem)] z-50 mr-9">
+            <div className="fixed bottom-5 left-64 w-[calc(100%-16rem)] z-50 ">
                 <Player track={currentTrack} />
             </div>
 
