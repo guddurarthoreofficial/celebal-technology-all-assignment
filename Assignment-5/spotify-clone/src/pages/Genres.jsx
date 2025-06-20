@@ -2,11 +2,13 @@ import React from 'react';
 
 const genres = [
   { id: 1, name: 'Pop', image: '/genres/pop.jpg' },
-  { id: 2, name: 'Rock', image: '/genres/rock.jpg' },
-  { id: 3, name: 'Hip-Hop', image: '/genres/hiphop.jpg' },
-  { id: 4, name: 'Jazz', image: '/genres/jazz.jpg' },
-  { id: 5, name: 'Electronic', image: '/genres/electronic.jpg' },
-  { id: 6, name: 'Classical', image: '/genres/classical.jpg' },
+  { id: 2, name: 'Rock', image: '/genres/rock.webp' },
+  { id: 3, name: 'Hip-Hop', image: '/genres/rockMusic.jpg' },
+  { id: 4, name: 'Jazz', image: '/genres/pop.jpg' },
+  { id: 4, name: 'Jazz', image: '/genres/pop.jpg' },
+  { id: 4, name: 'Jazz', image: '/genres/pop.jpg' },
+  { id: 5, name: 'Electronic', image: '/genres/rock.webp' },
+  { id: 6, name: 'Classical', image: '/genres/rockMusic.jpg' },
 ];
 
 const Genres = () => {

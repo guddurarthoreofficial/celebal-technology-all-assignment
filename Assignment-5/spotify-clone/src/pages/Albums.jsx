@@ -5,31 +5,37 @@ const dummyAlbums = [
     id: 1,
     title: 'After Hours',
     artist: 'The Weeknd',
-    cover: '/albums/after-hours.jpg',
+    cover: '/albums/afterHours.jpg',
   },
   {
     id: 2,
     title: 'Future Nostalgia',
     artist: 'Dua Lipa',
-    cover: '/albums/future-nostalgia.jpg',
+    cover: '/albums/future.jpg',
   },
   {
     id: 3,
     title: 'Justice',
     artist: 'Justin Bieber',
-    cover: '/albums/justice.jpg',
+    cover: '/albums/afterHours.jpg',
   },
   {
     id: 4,
     title: 'Divide',
     artist: 'Ed Sheeran',
-    cover: '/albums/divide.jpg',
+    cover: '/albums/future.jpg',
   },
   {
     id: 5,
     title: 'Random Access Memories',
     artist: 'Daft Punk',
-    cover: '/albums/ram.jpg',
+    cover: '/albums/afterHours.jpg',
+  }, 
+  {
+    id: 5,
+    title: 'Random Access Memories',
+    artist: 'Daft Punk',
+    cover: '/albums/afterHours.jpg',
   },
 ];
 
